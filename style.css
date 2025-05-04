@@ -1,108 +1,157 @@
+/* Premium gradient background */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
-    margin: 0;
 }
 
+/* Glassmorphism container */
 .container {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
 h1 {
-    font-size: 2em;
     text-align: center;
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 .progress-bar-container {
-    background-color: #e0e0e0;
-    border-radius: 25px;
-    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    height: 14px;
+    margin-bottom: 20px;
     overflow: hidden;
 }
 
 .progress-bar {
-    height: 20px;
+    height: 100%;
     width: 0;
-    background-color: #76c7c0;
-    transition: width 0.5s;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    transition: width 0.5s ease;
+    border-radius: 30px;
 }
 
 .todo-input {
     display: flex;
-    justify-content: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
 .todo-input input {
-    padding: 10px;
+    flex: 1;
+    padding: 12px;
     font-size: 1em;
-    border: 2px solid #76c7c0;
-    border-radius: 5px;
-    width: 70%;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.todo-input input::placeholder {
+    color: #eee;
+}
+
+.todo-input input:focus {
+    outline: none;
+    border-color: #ffffff;
 }
 
 .todo-input button {
-    padding: 10px;
-    font-size: 1.2em;
-    margin-left: 10px;
-    border: none;
-    background-color: #76c7c0;
+    background: linear-gradient(to right, #43e97b, #38f9d7);
     color: white;
+    font-size: 1.2em;
+    padding: 0 16px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 .todo-input button:hover {
-    background-color: #5ea5a0;
+    background: linear-gradient(to right, #38f9d7, #43e97b);
+}
+
+#alert {
+    text-align: center;
+    color: #ff4d4d;
+    font-weight: bold;
+    margin-bottom: 10px;
+    height: 20px;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 li {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    color: #fff;
 }
 
-li.completed {
+li.completed span {
     text-decoration: line-through;
-    color: grey;
+    color: #ccc;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+li span {
+    flex: 1;
+    color: #fff;
 }
 
 button.edit, button.delete {
-    margin-left: 10px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
     cursor: pointer;
+    margin-left: 6px;
+    transition: background 0.3s;
 }
 
 button.edit {
-    background-color: #76c7c0;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background: #3498db;
 }
 
 button.delete {
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background: #e74c3c;
 }
 
 button.edit:hover {
-    background-color: #5ea5a0;
+    background: #2980b9;
 }
 
 button.delete:hover {
-    background-color: darkred;
+    background: #c0392b;
 }
